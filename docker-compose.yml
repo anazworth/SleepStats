@@ -1,0 +1,19 @@
+version: '3'
+  
+volumes:
+  sleepStatsDB_data:
+
+services:
+  sleepstatsDB:
+    image: postgres
+    container_name: sleepstatsDB
+    restart: always
+    environment:
+      POSTGRES_USER: curry
+      POSTGRES_PASSWORD: currysleep
+      POSTGRES_DB: sleepstats
+    ports:
+      - 5432:5432
+    volumes:
+      - sleepStatsDB_data:/var/lib/postgresql/data
+    
