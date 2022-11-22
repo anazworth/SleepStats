@@ -21,3 +21,4 @@
 go.work
 
 .env
+docker-compose.yml
